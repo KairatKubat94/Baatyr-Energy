@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Каталог боулов — Baatyr Energy</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+    :root {
+      --green-dark: #1B5E20;
+      --green-main: #43A047;
+      --green-light: #A5D6A7;
+      --green-lighter: #F1F8E9;
+      --accent: #FFB300;
+      --white: #fff;
+      --shadow: 0 4px 24px 0 rgba(67, 160, 71, 0.10);
+      --radius: 18px;
+      --text-dark: #1B3A1B;
+      --text-light: #4C734C;
+    }
+    body {
+      font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+      background: linear-gradient(120deg, var(--green-lighter) 60%, #fff 100%);
+      color: var(--text-dark);
+      margin: 0;
+      min-height: 100vh;
+    }
+    nav.navbar {
+      background: var(--green-main);
+      box-shadow: var(--shadow);
+      border-radius: 0 0 var(--radius) var(--radius);
+    }
+    .nav-link, .navbar-brand {
+      color: var(--white) !important;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      transition: color 0.2s;
+    }
+    .nav-link:hover, .nav-link.active {
+      color: var(--accent) !important;
+    }
+    .navbar-brand {
+      font-size: 1.5rem;
+    }
+    header {
+      background: linear-gradient(135deg, var(--green-dark), var(--green-main) 80%);
+      color: white;
+      padding: 90px 20px 60px 20px;
+      text-align: center;
+      margin-bottom: 40px;
+      border-radius: 0 0 var(--radius) var(--radius);
+      box-shadow: var(--shadow);
+      position: relative;
+    }
+    header h1 {
+      font-size: 3.2rem;
+      font-weight: 900;
+      margin-bottom: 18px;
+    }
+    header p {
+      font-size: 1.3rem;
+    }
+    main.container {
+      max-width: 1100px;
+      margin-bottom: 80px;
+      background: var(--white);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 40px 30px 50px 30px;
+      margin-top: -40px;
+      position: relative;
+    }
+    .card {
+      border: none;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 6px 24px rgba(67,160,71,0.12);
+      transition: transform 0.3s;
+      background: var(--green-lighter);
+    }
+    .card:hover {
+      transform: translateY(-6px) scale(1.03);
+    }
+    .card-img-top {
+      height: 320px;
+      object-fit: cover;
+    }
+    .card-body {
+      padding: 1.5rem;
+    }
+    .card-title {
+      color: var(--green-dark);
+      font-weight: 700;
+      font-size: 1.3rem;
+    }
+    .card-text {
+      font-size: 1.05rem;
+      color: var(--text-light);
+      margin-bottom: 10px;
+    }
+    .price-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 10px;
+    }
+    .price {
+      font-weight: bold;
+      color: var(--green-dark);
+      font-size: 1.1rem;
+    }
+    .btn-cart {
+      background-color: var(--green-main);
+      color: white;
+      border: none;
+      padding: 6px 14px;
+      border-radius: 8px;
+      font-weight: 500;
+      transition: 0.2s;
+    }
+    .btn-cart:hover {
+      background-color: var(--green-dark);
+    }
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">Baatyr Energy</a>
+    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="nav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Главная</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">О нас</a></li>
+        <li class="nav-item"><a class="nav-link active" href="product.html">Каталог</a></li>
+        <li class="nav-item"><a class="nav-link" href="team.html">Команда</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Контакты</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<header>
+  <h1>Наши фруктовые боулы</h1>
+  <p>Полезно, вкусно и красиво — с натуральными ингредиентами</p>
+</header>
+
+<main class="container">
+  <div class="row g-4">
+    <!-- Карточка 1 -->
+    <div class="col-sm-6 col-lg-4">
+      <div class="card">
+        <img src="img/allbowls.jpeg" class="card-img-top" alt="Ассортимент боулов" />
+        <div class="card-body">
+          <h5 class="card-title">Корзина из 5 боулов</h5>
+          <p class="card-text">Каждый боул имеет своё особенное сочетание разных продуктов.</p>
+          <div class="price-row">
+            <span class="price">1200 сомов</span>
+            <button class="btn-cart">В корзину</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Карточка 2 -->
+    <div class="col-sm-6 col-lg-4">
+      <div class="card">
+        <img src="img/berries.jpeg" class="card-img-top" alt="Ягодный микс" />
+        <div class="card-body">
+          <h5 class="card-title">Ягодный микс</h5>
+          <p class="card-text">Йогурт, гранола, голубика, клубника, малина и изюм.</p>
+          <div class="price-row">
+            <span class="price">250 сомов</span>
+            <button class="btn-cart">В корзину</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Карточка 3 -->
+    <div class="col-sm-6 col-lg-4">
+      <div class="card">
+        <img src="img/bowl.jpeg" class="card-img-top" alt="Golden Bowl" />
+        <div class="card-body">
+          <h5 class="card-title">Golden Bowl</h5>
+          <p class="card-text">Йогурт, гранола, клубника, банан, изюм, тыквенные семечки и кешью.</p>
+          <div class="price-row">
+            <span class="price">250 сомов</span>
+            <button class="btn-cart">В корзину</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Карточка 4 -->
+    <div class="col-sm-6 col-lg-4">
+      <div class="card">
+        <img src="img/goldenbowl.jpeg" class="card-img-top" alt="Ореховая энергия" />
+        <div class="card-body">
+          <h5 class="card-title">Эко-бум</h5>
+          <p class="card-text">Сытный боул с орехами и сухофруктами в сочетании с голубикой и нежным йогуртом.</p>
+          <div class="price-row">
+            <span class="price">250 сомов</span>
+            <button class="btn-cart">В корзину</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Карточка 5 -->
+    <div class="col-sm-6 col-lg-4">
+      <div class="card">
+        <img src="img/morningbowl.jpeg" class="card-img-top" alt="Блаженство гармонии" />
+        <div class="card-body">
+          <h5 class="card-title">Блаженство гармонии</h5>
+          <p class="card-text">Йогурт, гранола , клюква, изюм, сушенный инжир и орехи.</p>
+          <div class="price-row">
+            <span class="price">250 сомов</span>
+            <button class="btn-cart">В корзину</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Карточка 6 -->
+    <div class="col-sm-6 col-lg-4">
+      <div class="card">
+        <img src="img/asianmix.jpeg" class="card-img-top" alt="Азиатская экзотика" />
+        <div class="card-body">
+          <h5 class="card-title">Азиатская экзотика</h5>
+          <p class="card-text">Йогурт, гранола, малина, голубика, драгонфрут и миндаль.</p>
+          <div class="price-row">
+            <span class="price">250 сомов</span>
+            <button class="btn-cart">В корзину</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

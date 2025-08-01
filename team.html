@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Наша команда — Baatyr Energy</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+    :root {
+      --green-dark: #1B5E20;
+      --green-main: #43A047;
+      --green-light: #A5D6A7;
+      --green-lighter: #F1F8E9;
+      --accent: #FFB300;
+      --white: #fff;
+      --shadow: 0 4px 24px 0 rgba(67, 160, 71, 0.10);
+      --radius: 18px;
+      --text-dark: #1B3A1B;
+      --text-light: #4C734C;
+    }
+    body {
+      font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+      background: linear-gradient(120deg, var(--green-lighter) 60%, #fff 100%);
+      color: var(--text-dark);
+      margin: 0;
+      min-height: 100vh;
+    }
+    nav.navbar {
+      background: var(--green-main);
+      box-shadow: var(--shadow);
+      border-radius: 0 0 var(--radius) var(--radius);
+    }
+    .nav-link, .navbar-brand {
+      color: var(--white) !important;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      transition: color 0.2s;
+    }
+    .nav-link:hover, .nav-link.active {
+      color: var(--accent) !important;
+      text-shadow: 0 2px 8px rgba(255,179,0,0.10);
+    }
+    .navbar-brand {
+      font-size: 1.5rem;
+      letter-spacing: 1px;
+      text-shadow: 0 2px 8px rgba(67,160,71,0.10);
+    }
+    header {
+      background: linear-gradient(135deg, var(--green-dark), var(--green-main) 80%);
+      color: white;
+      padding: 90px 20px 60px 20px;
+      text-align: center;
+      margin-bottom: 40px;
+      border-radius: 0 0 var(--radius) var(--radius);
+      box-shadow: var(--shadow);
+      position: relative;
+      overflow: hidden;
+    }
+    header::after {
+      content: '';
+      position: absolute;
+      right: -60px;
+      top: 30px;
+      width: 180px;
+      height: 180px;
+      background: radial-gradient(circle, var(--accent) 0%, transparent 70%);
+      opacity: 0.18;
+      z-index: 0;
+    }
+    header h1 {
+      font-size: 3.2rem;
+      font-weight: 900;
+      letter-spacing: 2px;
+      margin-bottom: 18px;
+      z-index: 1;
+      position: relative;
+      text-shadow: 0 4px 24px rgba(0,0,0,0.10);
+    }
+    header p {
+      font-size: 1.3rem;
+      font-weight: 400;
+      z-index: 1;
+      position: relative;
+    }
+    .team-section.container {
+      max-width: 1100px;
+      margin-bottom: 80px;
+      background: var(--white);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 40px 30px 50px 30px;
+      margin-top: -40px;
+      position: relative;
+      z-index: 2;
+    }
+    .team-card {
+      background: var(--green-lighter);
+      border-radius: 16px;
+      box-shadow: 0 4px 18px rgba(67,160,71,0.10);
+      padding: 24px 12px 18px 12px;
+      text-align: center;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .team-card:hover {
+      transform: translateY(-5px) scale(1.03);
+      box-shadow: 0 8px 32px rgba(255,179,0,0.13);
+    }
+    .team-card img {
+      width: 120px;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-bottom: 15px;
+      box-shadow: 0 2px 12px 0 rgba(67,160,71,0.10);
+    }
+    .team-card h5 {
+      font-weight: 700;
+      color: var(--green-dark);
+      font-size: 1.15rem;
+    }
+    .team-card p {
+      font-size: 1rem;
+      color: var(--text-light);
+    }
+    .btn-success {
+      background: linear-gradient(90deg, var(--green-main), var(--accent));
+      border: none;
+      color: var(--white);
+      font-weight: 700;
+      font-size: 1.1rem;
+      border-radius: var(--radius);
+      box-shadow: 0 2px 12px 0 rgba(67,160,71,0.10);
+      padding: 12px 32px;
+      transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+    }
+    .btn-success:hover, .btn-success:focus {
+      background: linear-gradient(90deg, var(--accent), var(--green-main));
+      color: var(--green-dark);
+      transform: translateY(-2px) scale(1.04);
+      box-shadow: 0 6px 24px 0 rgba(255,179,0,0.13);
+    }
+    footer {
+      background: var(--green-lighter);
+      color: var(--text-light);
+      text-align: center;
+      padding: 22px 0 18px 0;
+      border-top: 1px solid var(--green-light);
+      font-size: 1rem;
+      letter-spacing: 0.5px;
+      margin-top: 40px;
+    }
+    @media (max-width: 600px) {
+      header h1 { font-size: 2.1rem; }
+      .team-section.container { padding: 18px 6px 30px 6px; }
+      .team-card img { height: 80px; width: 80px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Навигация -->
+<nav class="navbar navbar-expand-lg">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">Baatyr Energy</a>
+    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="nav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Главная</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">О нас</a></li>
+        <li class="nav-item"><a class="nav-link" href="product.html">Каталог</a></li>
+        <li class="nav-item"><a class="nav-link active" href="team.html">Команда</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Контакты</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Заголовок -->
+<header>
+  <h1>Наша команда</h1>
+</header>
+
+<!-- Секция команды -->
+<section class="team-section container">
+  <div class="row g-4">
+    <div class="col-sm-6 col-lg-4">
+      <div class="team-card">
+        <img src="https://randomuser.me/api/portraits/women/45.jpg" alt="Айза Кенешбек">
+        <h5>Айза Кенешбек</h5>
+        <p>Основатель & CEO</p>
+        <p>Создала бренд и ведёт команду к успеху.</p>
+      </div>
+    </div>
+    <div class="col-sm-6 col-lg-4">
+      <div class="team-card">
+        <img src="https://randomuser.me/api/portraits/men/51.jpg" alt="Эрмек Абдылдаев">
+        <h5>Эрмек Абдылдаев</h5>
+        <p>Маркетинг-директор</p>
+        <p>Развивает узнаваемость бренда.</p>
+      </div>
+    </div>
+    <div class="col-sm-6 col-lg-4">
+      <div class="team-card">
+        <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Мээрим Жээнбаева">
+        <h5>Мээрим Жээнбаева</h5>
+        <p>Шеф-повар</p>
+        <p>Создаёт идеальные боулы каждый день.</p>
+      </div>
+    </div>
+    <div class="col-sm-6 col-lg-4">
+      <div class="team-card">
+        <img src="https://randomuser.me/api/portraits/men/33.jpg" alt="Канат Казыбеков">
+        <h5>Канат Казыбеков</h5>
+        <p>Операционный менеджер</p>
+        <p>Следит за качеством всех процессов.</p>
+      </div>
+    </div>
+    <div class="col-sm-6 col-lg-4">
+      <div class="team-card">
+        <img src="https://randomuser.me/api/portraits/women/23.jpg" alt="Динара Эсенова">
+        <h5>Динара Эсенова</h5>
+        <p>SMM-менеджер</p>
+        <p>Вдохновляет в соцсетях и работает с аудиторией.</p>
+      </div>
+    </div>
+    <div class="col-sm-6 col-lg-4">
+      <div class="team-card">
+        <img src="https://randomuser.me/api/portraits/men/12.jpg" alt="Руслан Токтогулов">
+        <h5>Руслан Токтогулов</h5>
+        <p>Дизайнер</p>
+        <p>Создаёт визуальный стиль и упаковку бренда.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Подвал -->
+<footer>
+  © 2025 Baatyr Energy. Все права защищены.
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
